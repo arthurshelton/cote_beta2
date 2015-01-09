@@ -20,7 +20,7 @@ p{
 }
 
 a{
-text-decoration:none;
+	text-decoration:none;
 }
 
 .container_main{
@@ -32,13 +32,18 @@ text-decoration:none;
 	border:1px solid #ddd;
 	/*padding:12px;*/
 	border-radius: 12px;
-	}
+}
 	
 .container_main_int{
 	margin:12px;
+	width: 96%;
 }
 .phrase_accroche{
-	font-size:20px;
+	font-size:18px;
+}
+
+.phrase_intro{
+	font-size:16px;
 }
 .titres{
 	font-family: 'Gloria Hallelujah', cursive;
@@ -47,10 +52,12 @@ text-decoration:none;
 }
 	
 .header{
+	width: 100%;
 	background:url(images/fond_banner.jpg);
 	text-align:center;
 	border-radius: 12px;
-	height:100px;
+	/*height:100px;*/
+	margin-bottom:4px;
 }
 
 .nom_etape{
@@ -63,7 +70,6 @@ text-decoration:none;
 
 .choix_cuisson{
 	clear:both;
-	margin:12px;
 	padding:12px;
 	background:url(images/fond_ardoise.jpg);
 	border-radius: 12px;
@@ -90,4 +96,16 @@ text-decoration:none;
 	color:white;
 	font-family: 'Gloria Hallelujah', cursive;	
 	cursor:pointer;
+}
+
+.clock {
+    transform-origin: 0 0;
+    transform: scale(.9);
+	-ms-transform: scale(.9);
+    -webkit-transform-origin: 0 0;
+    -webkit-transform: scale(.9);
+    -o-transform-origin: 0 0;
+    -o-transform: scale(.9);
+    -moz-transform-origin: 0 0;
+    -moz-transform: scale(.9);
 }
