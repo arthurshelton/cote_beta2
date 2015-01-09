@@ -3,29 +3,35 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>La côte de boeuf</title>
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
-	<link rel="stylesheet" href="themes/cote_boeuf.css" />
+	<!--<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />-->
 	
 	<link rel="stylesheet" href="compiled/flipclock.css">
+	<link rel="stylesheet" href="themes/cote_boeuf.css" />
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script src="compiled/flipclock.js"></script>	
 		
 </head>
 <body>
 
-	<div data-role="page" data-theme="a">
+	<div class="container_body">
 		<div class="header" >
-			<h1>La meilleure côte de boeuf</h1>
+			<img src="themes/images/banner_titre.png" />
+			
 		</div>
 <br/>
 		<div class="container_main">
-            <h3>Saignante</h3> 
-			<h2 class="nom_etape">Étape 1</h3> 
-			<p>Première tranche de 4 minutes : cuisson de la première face. Déposez la viande sur la surface de cuisson très chaude, et ne la bougez plus pendant 4 minutes !</p>
-			<div class="clock" style="margin:2em;"></div>
+			<div class="container_main_int">
+            <h3>Cuisson saignante</h3> 
+			<h2 class="nom_etape">Étape 1</h2> 
+			<p><b>Première tranche de 4 minutes : cuisson de la première face.</b> <br/>
+			Déposez la viande sur la surface de cuisson très chaude, et ne la bougez plus pendant 4 minutes !</p>
+			<br/>
+			<!-- <div class="image" style=""><img src="themes/images/cote_de_boeuf_300.jpg" style="float:right;margin:4px;"/></div>-->
+			<div class="clock" style="margin:0 auto;"></div>
 	<div class="message"></div>
-
-	<button class="start">Start Clock</button>
+	<br/>
+	<!--<button class="start">Start Clock</button>-->
+	<div class="start"><h2>C'EST PARTI !</h2></span>
 
 	<script type="text/javascript">
 		var clock;
@@ -56,7 +62,7 @@
 	</script>
 				
             </div>
-	 
+	   </div>
 	</div>
 
 </body>
