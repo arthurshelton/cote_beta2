@@ -1,0 +1,63 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>La côte de boeuf</title>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+	<link rel="stylesheet" href="themes/cote_boeuf.css" />
+	
+	<link rel="stylesheet" href="compiled/flipclock.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="compiled/flipclock.js"></script>	
+		
+</head>
+<body>
+
+	<div data-role="page" data-theme="a">
+		<div class="header" >
+			<h1>La meilleure côte de boeuf</h1>
+		</div>
+<br/>
+		<div class="container_main">
+            <h3>Saignante</h3> 
+			<h2 class="nom_etape">Étape 1</h3> 
+			<p>Première tranche de 4 minutes : cuisson de la première face. Déposez la viande sur la surface de cuisson très chaude, et ne la bougez plus pendant 4 minutes !</p>
+			<div class="clock" style="margin:2em;"></div>
+	<div class="message"></div>
+
+	<button class="start">Start Clock</button>
+
+	<script type="text/javascript">
+		var clock;
+
+		$(document).ready(function() {
+
+			clock = $('.clock').FlipClock(10, {
+		        clockFace: 'MinuteCounter',
+		        countdown: true,
+		        autoStart: false,
+		        callbacks: {
+		        	start: function() {
+		        		$('.message').html("C'est parti pour la cuisson !");
+		        	},
+					stop: function() {
+		        		$('.message').html("On retourne la viande !");
+						$(location).attr('href',"saignante2.html");
+		        	}
+		        }
+
+		    });
+
+		    $('.start').click(function(e) {
+				clock.start();
+		    });
+
+		});
+	</script>
+				
+            </div>
+	 
+	</div>
+
+</body>
+</html>
