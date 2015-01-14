@@ -1,0 +1,58 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>La côte de boeuf</title>
+	<!--<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />-->
+	
+	<link rel="stylesheet" href="compiled/flipclock.css">
+	<link rel="stylesheet" href="themes/cote_boeuf.css" />
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="compiled/flipclock.js"></script>	
+		
+</head>
+<body>
+
+	<div class="container_body">
+		<div class="header" >
+			<a href="index.html"><img src="themes/images/banner_grey.png" style="margin-top:10px;" width="320px"/></a>
+			<!--<br/><img src="themes/images/banner_titre_2.png" style="" />-->
+		</div>
+
+		<div class="container_main">
+			<div class="container_main_int">
+            <h3>Cuisson saignante</h3> 
+			
+			<h2 class="nom_etape">C'EST PRÊT !</h2> 
+			<p><b>A ce stade, normalement, votre côte de boeuf est bien saisie, cuite sur l'extérieure et saignante à coeur. </b> <br/>
+			Laissez-la reposer 5 minutes avant de commencer à la découper. </p><br/>
+			<div class="image_cote_cuite"></div>
+			<br/>
+			<div class="fin"><h2>BON APPÉTIT !</h2></span>
+			<br/>
+			<!-- <div class="image" style=""><img src="themes/images/cote_de_boeuf_300.jpg" style="float:right;margin:4px;"/></div>-->
+			<div class="clock" style="margin:0 auto;"></div>
+	<div class="message"></div>
+	<br/>
+	<!--<button class="start">Start Clock</button>-->
+	
+
+	<script type="text/javascript">
+		
+		var audioElement = document.createElement('audio');
+        audioElement.setAttribute('src', 'sons/et_voila_bon_appetit.mp3');
+       
+	  
+		$(document).ready(function() {
+			audioElement.play();
+			window.setTimeout("location=('index.html');",7000);
+		});
+		
+	</script>
+				
+            </div>
+	   </div>
+	</div>
+
+</body>
+</html>

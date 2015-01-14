@@ -1,0 +1,66 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>La côte de boeuf</title>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+	<link rel="stylesheet" href="themes/cote_boeuf.css" />
+	
+	<link rel="stylesheet" href="compiled/flipclock.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="compiled/flipclock.js"></script>	
+		
+</head>
+<body>
+
+	<div class="container_body">
+		<div class="header" >
+			<img src="themes/images/banner_grey.png" style="margin-top:10px;" width="320px"/>
+			<!--<br/><img src="themes/images/banner_titre_2.png" style="" />-->
+		</div>
+		
+		<div class="container_main">
+			<div class="container_main_int">
+            <h3 class="titres_pages_cuisson" style="">Cuisson saignante</h3>
+			<h2 class="nom_etape">Étape 2 : deuxième face</h3> 
+				<p class="p_indications">Deuxième tranche de 4 minutes. Retournez la côte et déposez la face encore crue sur la surface de cuisson très chaude. Une fois posée, ne bougez plus la viande pendant 4 minutes ! </p>
+				<br/>
+				<br/>
+				<div class="container_clock">
+					<div class="clock" style="margin:0 auto;"></div>
+					<div class="message"></div>
+
+					<script type="text/javascript">
+
+						var clock;
+
+						$(document).ready(function() {
+
+							clock = $('.clock').FlipClock(10, {
+								clockFace: 'MinuteCounter',
+								countdown: true,
+								autoStart: false,
+								callbacks: {
+									start: function() {
+										//$('.message').html("C'est parti pour la cuisson !");
+									},
+									stop: function() {
+										window.setTimeout("location=('saignante_fin.html');",1000);
+									}
+								}
+
+							});
+
+							clock.start();
+
+
+						});
+					</script>
+				
+				</div>
+            </div>
+	  </div>
+	</div>
+
+</body>
+</html>

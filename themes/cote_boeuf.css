@@ -1,6 +1,7 @@
 
 @import url('http://fonts.googleapis.com/css?family=Fjalla+One');
 @import url('http://fonts.googleapis.com/css?family=Gloria+Hallelujah');
+@import url('http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
 
 
 *{
@@ -8,7 +9,10 @@
 }
 
 body{
-	background:#888;
+	background:#eee;
+	margin:0px;
+	background:url(images/fond_papier_1280.jpg);
+	background-size: 60%;
 }
 
 h3,p{
@@ -22,9 +26,20 @@ p{
 a{
 	text-decoration:none;
 }
+	
+.header{
+	width: 100%;
+	/*background:url(images/fond_banner.jpg);*/
+	text-align:center;
+	/*border-radius: 12px;
+	height:100px;*/
+	/*margin:12px;*/
+	margin-bottom:4px;
+	margin-top:0px;
+}
 
 .container_main{
-	width: 100%;
+	width: 96%;
 	/*height: 80%;*/
 	/*background-image: url(images/cote_de_boeuf_800.jpg);background-repeat: no-repeat;*/
 	color:grey;
@@ -32,32 +47,50 @@ a{
 	border:1px solid #ddd;
 	/*padding:12px;*/
 	border-radius: 12px;
+	margin:0px 12px;
 }
 	
-.container_main_int{
+.container_main_int,.container_main_int_cuisson{
 	margin:12px;
 	width: 96%;
+	text-align:center;
 }
+
+.container_main_int_cuisson{
+	background-image: url(images/fond_logo_10.png);
+	background-repeat: no-repeat;
+    /*background-attachment: fixed;
+    background-position: 50% 120%; */
+    background-position: center;
+}
+
+.container_main_int h3,.container_main_int_cuisson h3{
+	margin:6px 12px;
+}
+
 .phrase_accroche{
-	font-size:18px;
+	font-size:20px;
+	/*font-family:'Gloria Hallelujah', cursive;*/
+	font-family: 'Open Sans Condensed', sans-serif;
+	color:#883c3c;
 }
+
 
 .phrase_intro{
 	font-size:16px;
+	margin:0px 4px 0px 14px;
 }
 .titres{
 	font-family: 'Gloria Hallelujah', cursive;
 	font-weight:none;
-	font-size:22px;
+	font-size:26px;
 }
-	
-.header{
-	width: 100%;
-	background:url(images/fond_banner.jpg);
-	text-align:center;
-	border-radius: 12px;
-	/*height:100px;*/
-	margin-bottom:4px;
+
+.titres_pages_cuisson{
+	font-family: 'Gloria Hallelujah', cursive;
+	font-weight:none;
+	font-size:18px;
+	color:#213846;
 }
 
 .nom_etape{
@@ -66,37 +99,99 @@ a{
 	color:red;
 	font-size:28px;
 	font-weight:normal;
+	margin:0;
+}
+
+.message{
+	color:#883c3c;
 }
 
 .choix_cuisson{
 	clear:both;
-	padding:12px;
-	background:url(images/fond_ardoise.jpg);
-	border-radius: 12px;
+	padding:0px 10px;
+	/*border-radius: 12px;*/
 	color:grey;
+}
+
+.container_main_int_intro{
+	text-align:left;
+}
+
+.choix_cuisson_int{
+	/*padding:8px;*/
+	margin:4px;
+	background:url(images/fond_ardoise_2.jpg);
+	border-radius: 8px;
+	color:grey;
+	text-align:left;
 }
 
 .description_cuisson{
 	font-size:14px;
+	margin:0px 4px 0px 14px;
 }
 
 .description_cuisson a{
+	/*color:#883c3c;*/
+}
+
+.phrase_attention{
+	color:red;
+	margin:0px 4px 0px 14px;
+
+}
+
+
+.p_indications{
+	/*font-family: 'Open Sans Condensed', sans-serif;*/
 	color:#883c3c;
 }
 
-.start{
+.start,.fin{
 	background:url(images/fond_ardoise_small.jpg);
 	border-radius: 10px;
-	width:260px;
+	width:220px;
 	padding:12px;
 	text-align:center;
+	/*margin:0 auto;*/
+	margin-left:8px;
 }
+
+.fin{
+	padding:8px;
+}
+
 
 .start h2{
 	color:white;
 	font-family: 'Gloria Hallelujah', cursive;	
 	cursor:pointer;
 }
+.fin h2{
+	color:white;
+	font-family: 'Gloria Hallelujah', cursive;
+}
+
+.span_pourquoi{
+	font-size:12px;
+	cursor:pointer;
+	color:#883c3c;
+}
+
+.span_retour{
+	font-size:12px;
+	font-family: 'Fjalla One', sans-serif;
+	text-transform:uppercase;
+	color:#213846;
+}
+
+.container_clock{
+	text-align:center;
+	margin:0 auto;
+	width:284px;
+}
+
+
 
 .clock {
     transform-origin: 0 0;
@@ -108,4 +203,26 @@ a{
     -o-transform: scale(.9);
     -moz-transform-origin: 0 0;
     -moz-transform: scale(.9);
+	margin:0 auto;
+}
+
+.image_cote_cuite{
+	width:400px;
+	height:260px;
+	border-radius: 10px;
+	background:url(images/cote_cuite_saignante.jpg);
+}
+
+
+/* pourquoi widget*/
+
+.ui-widget-header{
+	background:#213846;
+	border:1px solid #883c3c;;
+}
+
+.ui-widget-content {
+	font-size:12px;
+	color:#883c3c;
+	background:#eee;
 }
