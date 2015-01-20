@@ -3,17 +3,12 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>La côte de boeuf</title>
-	<!--<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />-->
+	<!--<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+	<link rel="stylesheet" href="src/jquery.mobile-1.4.5.css" />-->
 	
 	<link rel="stylesheet" href="compiled/flipclock.css">
-	<link rel="stylesheet" href="src/jquery-ui-1.11.2/jquery-ui.min.css" />
 	<link rel="stylesheet" href="themes/cote_boeuf.css" />
 	
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-	<!-- <script src="src/jquery-ui-1.11.2/jquery-ui.min.js"></script> -->
-	<script src="src/Media.js"></script>
-	<script src="src/MediaError.js"></script>
-	<script src="compiled/flipclock.js"></script>	
 		
 </head>
 <body>
@@ -21,7 +16,6 @@
 	<div class="container_body">
 		<div class="header" >
 			<img src="themes/images/banner_grey.png" style="margin-top:10px;" width="320px"/>
-			<!--<br/><img src="themes/images/banner_titre_2.png" style="" />-->
 		</div>
 		
 		<div class="container_main">
@@ -30,49 +24,56 @@
 				<h2 class="nom_etape">Étape 1 : cuisson de la première face</h2> 
 				<!--<b>Première tranche de 4 minutes : cuisson de la première face.</b> <br/>-->
 				<p class="p_indications">Déposez la viande sur la surface de cuisson très chaude, et ne la bougez plus pendant 4 minutes !</p>
-				<span class="span_pourquoi">Pourquoi ?</span>
-				<br/><br/>
-				<div id="dialog" title="ASTUCES">
-					<p>Veillez à utiliser une surface de cuisson (plancha, grill ou poele) TRÈS chaude.<br/><br/>
-					Afin que la viande soit bien saisie et forme une couche croustillante à sa surface (tout en préservant le moelleux de l'intérieur), ne déplacez pas la viande une fois qu'elle est déposée sur la surface de cuisson, sinon elle risque d'attacher et de ne pas être saisie. </p>
+				<br/>
+				
+				<div id="clickme">
+					<span class="span_pourquoi">Pourquoi ?</span>
 				</div>
 				
 				<br/>
-				<!-- <div class="image" style=""><img src="themes/images/cote_de_boeuf_300.jpg" style="float:right;margin:4px;"/></div>-->
+				
+				<div id="info_cuisson" style="display: none;" class="div_info_cuisson">
+					<p>Veillez à utiliser une surface de cuisson (plancha, grill ou poele) TRÈS chaude.<br/><br/>
+					Afin que la viande soit bien saisie et forme une couche croustillante à sa surface (tout en préservant le moelleux de l'intérieur), ne déplacez pas la viande une fois qu'elle est déposée sur la surface de cuisson, sinon elle risque d'attacher et de ne pas être saisie. </p>
+				</div>
+											
+				<br/><br/>
+				
+				
 				<div class="container_clock">
 					<div class="clock" style="margin:0 auto;"></div>
 					<div class="message"></div>
 					<br/>
-					<!--<button class="start">Start Clock</button>-->
-					<div class="start"><h2>C'EST PARTI !</h2></span>
+					<div class="start"><h2>C'EST PARTI !</h2></span></div>
+				</div>
+				
+				<br/>
+				<a href="index.html" ><span class="span_retour">< retour à l'accueil</span></a>
+				<br/>
+				
+	   </div>
+	</div>
+</div>
 
-					
-					
+        <!--  <script type="text/javascript" src="js/jquery.mobile-1.4.5.js"></script> -->
+		<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+		<script type="text/javascript" src="compiled/flipclock.js"></script>
+      		
 					<script type="text/javascript">
-						
+												
 						var audioElement = document.createElement('audio');
 						audioElement.setAttribute('src', 'sons/retourner_la_viande.mp3');
 
 						$(document).ready(function() {
-							
-							$(function() {
-								$( "#dialog" ).dialog({
-								  autoOpen: false,
-								  show: {
-									effect: "blind",
-									duration: 1000
-								  },
-								  hide: {
-									effect: "blind",
-									duration: 1000
+
+							$( "#clickme" ).click(function() {
+							   if ( $( "#info_cuisson" ).is( ":hidden" ) ) {
+									$( "#info_cuisson" ).slideDown( "slow" );
+								  } else {
+									$( "#info_cuisson" ).slideUp("slow");
 								  }
-								});
-							 
-								$( ".span_pourquoi" ).click(function() {
-								  $( "#dialog" ).dialog( "open" );
-								});
 							});
-							
+
 							clock = $('.clock').FlipClock(10, {
 								clockFace: 'MinuteCounter',
 								countdown: true,
@@ -96,30 +97,8 @@
 							});
 
 						});
-						
-						
-						/*jQuery.fn.center = function () {
-							this.css("position","absolute");
-							this.css("top", Math.max(0, (($(window).height() - $(this).outerHeight()) / 2) + 
-																		$(window).scrollTop()) + "px");
-							this.css("left", Math.max(0, (($(window).width() - $(this).outerWidth()) / 2) + 
-																		$(window).scrollLeft()) + "px");
-							return this;
-						}
-						
-						$('.clock').center();*/
 				
 					</script>
 								
-					</div>
-				</div>
-				
-				<br/>
-				<a href="index.html"><span class="span_retour">< retour à l'accueil</span></a>
-				<br/>
-				
-	   </div>
-	</div>
-
 </body>
 </html>

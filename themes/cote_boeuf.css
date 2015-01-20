@@ -226,3 +226,14 @@ a{
 	color:#883c3c;
 	background:#eee;
 }
+
+.div_info_cuisson{
+	width:50%;
+	border:1px solid grey;
+	border-radius: 12px;
+	padding:12px;
+	background:	#213846;
+	color:white;
+	text-align:justify;
+	margin:0 auto;
+}
